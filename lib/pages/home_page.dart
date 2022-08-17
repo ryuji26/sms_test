@@ -17,12 +17,11 @@ class _HomePageState extends State<HomePage> {
         child: Text("Home Page"),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          await _auth.signOut();
+        onPressed: () {
           Navigator.pushReplacement(
               context, MaterialPageRoute(builder: (context) => LoginScreen()));
         },
-        child: Icon(Icons.logout),
+        child: Icon(Icons.login),
       ),
     );
   }

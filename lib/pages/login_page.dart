@@ -43,7 +43,10 @@ class MobileFormWidget extends ConsumerWidget {
                         color: Colors.black,
                       ),
                       onPressed: () {
-                        Navigator.pop(context);
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomePage()));
                       },
                     ),
                   ),
@@ -206,7 +209,10 @@ class OtpFormWidget extends ConsumerWidget {
                           color: Colors.black,
                         ),
                         onPressed: () {
-                          Navigator.pop(context);
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomePage()));
                         },
                       ),
                     ),

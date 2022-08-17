@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sms_test/pages/home_page.dart';
 import 'package:sms_test/pages/login_page.dart';
+import 'package:sms_test/pages/login_success_page.dart';
 
 final loginControllerProvider =
     ChangeNotifierProvider((ref) => LoginController());
@@ -44,7 +45,7 @@ class LoginController extends ChangeNotifier {
 
       if (authCredential.user != null) {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => HomePage()));
+            context, MaterialPageRoute(builder: (context) => SuccessPage()));
       }
     } on FirebaseAuthException catch (e) {
       showLoading = false;
